@@ -1,0 +1,6 @@
+<library path="lib/librosneuro_decoder_gaussian">
+  <class type="rosneuro::decoder::Gaussian" base_class_type="rosneuro::decoder::GenericDecoder">
+    <description>This is the ROSNeuro Decoder Gaussian plugin.</description>
+  </class>
+</library>
+

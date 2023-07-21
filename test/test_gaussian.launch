@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+
+	<arg name="plugin" default='rosneuro::decoder::Gaussian'/>
+	<arg name="cfg_name" default='GaussianCfgTest'/>
+    <arg name="datapath" default="$(find rosneuro_decoder_gaussian)"/>
+	
+    <rosparam command="load" file="$(find rosneuro_decoder_gaussian)/test/gaussianCfgTest.yaml"/>
+	<node name="test_gaussian" pkg="rosneuro_decoder_gaussian" type="test_gaussian" output="screen" >
+		<param name="~plugin" 	  value="$(arg plugin)"/>
+        <param name="cfg_name" 	  value="$(arg cfg_name)"/>
+        <param name="datapath"    value="$(arg datapath)" />
+        
+	</node>
+		
+</launch>

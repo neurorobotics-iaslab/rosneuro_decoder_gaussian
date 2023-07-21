@@ -1,0 +1,29 @@
+GaussianCfg:
+  name: "gaussina"
+  params: 
+    filename: "file1"
+    subject: "S1"
+    filename: "file_prova"
+    nclasses: 2
+    classlbs: [771, 773]
+    nprototypes: 1
+    nfeatures: 3
+    idchans: [1, 2]
+    freqs: "3 2; 
+            2 1"
+    centers: "0.59;
+              0.51;
+              0.53;
+              0.43;
+              0.3;
+              0.2;"
+    covs: "0.6;
+           0.43;
+           0.2;
+           0.1;
+           0.4;
+           0.9;"
+
+
+
+
