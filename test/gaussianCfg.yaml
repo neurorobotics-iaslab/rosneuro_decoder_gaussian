@@ -1,16 +1,15 @@
 GaussianCfg:
-  name: "gaussina"
+  name: "gaussian"
   params: 
     filename: "file1"
     subject: "S1"
-    filename: "file_prova"
     nclasses: 2
     classlbs: [771, 773]
     nprototypes: 1
     nfeatures: 3
     idchans: [1, 2]
-    freqs: "3 2; 
-            2 1"
+    freqs: "8 10; 
+            10 12"
     centers: "0.59;
               0.51;
               0.53;

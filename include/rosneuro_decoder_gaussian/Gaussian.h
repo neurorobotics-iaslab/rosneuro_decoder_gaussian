@@ -24,7 +24,7 @@ namespace rosneuro{
         	std::vector<uint32_t>               idchans;
         	std::vector<std::vector<uint32_t>>  freqs;
 
-        } paramconfig_t;
+        } gauconfig_t;
         
 
         class Gaussian : public GenericDecoder{
@@ -42,7 +42,7 @@ namespace rosneuro{
                 bool check_dimension(void);
 
             private:
-		        paramconfig_t config_;
+		        gauconfig_t config_;
                 ros::NodeHandle p_nh_;
                 Eigen::MatrixXf centers_; // [(features*nclasses) x nprototypes]
                 Eigen::MatrixXf covs_; // [(features*nclasses) x nprototypes]
