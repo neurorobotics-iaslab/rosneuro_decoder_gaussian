@@ -4,13 +4,13 @@ This package implements a gaussian classifier as a plugin for rosneuro::decoder:
 
 ## Usage
 The package required as ros parameter:
-Markup : 
-    - **cfg_name**: which is the name of the structure in the yaml file
-    - **yaml file**: which contains the structure for the lda classifier
+<ul>
+    <li> <b>cfg_name</b>: which is the name of the structure in the yaml file;</li>
+    <li> <b>yaml file</b>: which contains the structure for the lda classifier. </li>
+</ul>
 
 ## Example of yaml file
-Markup: 
-`
+```
 GaussianCfg:
   name: "gaussian"
   params: 
@@ -47,11 +47,12 @@ GaussianCfg:
               -2.2393;
               -1.5272;
               -1.8280;"
-`
+```
 
 Some parameters are hard coded:
-Markup: 
-    - **idchans**: the index of the channels from 1 to the number of channels used;
-    - **freqs:**: the selected frequencies;
-    - **centers**: matrix [(features * classes) x prototypes];
-    - **covs**: matrix [(features * classes) x prototypes]. 
+<ul>
+    <li> <b>idchans</b>: the index of the channels from 1 to the number of channels used; </li>
+    <li> <b>freqs</b>: the selected frequencies; </li>
+    <li> <b>centers</b>: matrix [(features * classes) x prototypes]; </li>
+    <li> <b>covs</b>: matrix [(features * classes) x prototypes]. </li>
+</ul>
