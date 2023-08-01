@@ -4,6 +4,7 @@ clc; clearvars;
 %% Create the features
 
 % load gdf and classifier
+disp('Load the gdf and the classifier')
 [s,h] = sload('/home/paolo/subjects/s12/20230310/exponential_symmetric/c8.20230310.122436.online.mi_bhbf.exponential_sym.gdf');
 load('/home/paolo/subjects/s12/c8_bhbf_20230310.smr.mat');
 
@@ -42,6 +43,7 @@ end
 allFeaturesShaped = reshape(allFeatures, 6, size(allFeatures,1)/6)';
 
 %% Save features in a file
+disp('save the features')
 writematrix(allFeaturesShaped, '/home/paolo/rosneuro_ws/src/rosneuro_decoder_gaussian/test/features.csv');
 
 %% Do raw probability with matlab
@@ -58,6 +60,7 @@ for idx_dfet = 1:size(allFeaturesShaped,1)
 end
 
 %% load file and check if same raw probabilities
+disp('load the computed raw probability of rosneuro gaussian decoder')
 load('/home/paolo/rosneuro_ws/src/rosneuro_decoder_gaussian/test/rawprobRosneuro.csv');
 
 diff = max(abs(rawprobRosneuro(159,:) - allRawProbs(159,:)), [],'all');
