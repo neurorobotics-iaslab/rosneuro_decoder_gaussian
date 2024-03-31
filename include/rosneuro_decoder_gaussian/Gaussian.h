@@ -4,7 +4,7 @@
 #include <pluginlib/class_list_macros.h>
 #include <dynamic_reconfigure/server.h>
 #include <ros/ros.h>
-
+#include <gtest/gtest_prod.h>
 #include "rosneuro_decoder/GenericDecoder.h"
 
 namespace rosneuro{
@@ -46,6 +46,14 @@ namespace rosneuro{
                 ros::NodeHandle p_nh_;
                 Eigen::MatrixXf centers_; // [(features*nclasses) x nprototypes]
                 Eigen::MatrixXf covs_; // [(features*nclasses) x nprototypes]
+                FRIEND_TEST(GaussianTestSuite, Constructor);
+                FRIEND_TEST(GaussianTestSuite, Path);
+                FRIEND_TEST(GaussianTestSuite, Classes);
+                FRIEND_TEST(GaussianTestSuite, Configure);
+                FRIEND_TEST(GaussianTestSuite, CheckDimensionSize);
+                FRIEND_TEST(GaussianTestSuite, CheckDimensionFreq);
+                FRIEND_TEST(GaussianTestSuite, GetFeatures);
+                FRIEND_TEST(GaussianTestSuite, Apply);
         };
     }
 }

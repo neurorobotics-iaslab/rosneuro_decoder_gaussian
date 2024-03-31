@@ -39,6 +39,14 @@ catkin_package(
 )
 
 ##############################################################################
+# TEST
+##############################################################################
+
+catkin_add_gtest(TestGaussian test/TestGaussian.cpp)
+target_link_libraries(TestGaussian ${GTEST_BOTH_LIBRARIES} pthread gmock)
+target_link_libraries(TestGaussian ${PROJECT_NAME} ${catkin_LIBRARIES})
+
+##############################################################################
 # Build
 ##############################################################################
 
