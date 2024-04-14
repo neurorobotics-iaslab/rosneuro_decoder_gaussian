@@ -42,9 +42,11 @@ catkin_package(
 # TEST
 ##############################################################################
 
-catkin_add_gtest(TestGaussian test/TestGaussian.cpp)
-target_link_libraries(TestGaussian ${GTEST_BOTH_LIBRARIES} pthread gmock)
-target_link_libraries(TestGaussian ${PROJECT_NAME} ${catkin_LIBRARIES})
+if(CATKIN_ENABLE_TESTING)
+	catkin_add_gtest(TestGaussian test/TestGaussian.cpp)
+	target_link_libraries(TestGaussian ${GTEST_BOTH_LIBRARIES} pthread gmock)
+	target_link_libraries(TestGaussian ${PROJECT_NAME} ${catkin_LIBRARIES})
+endif()
 
 ##############################################################################
 # Build
@@ -67,7 +69,7 @@ add_dependencies(${PROJECT_NAME}
 				 ${catkin_EXPORTED_TARGETS}
 )
 
-add_executable(test_gaussian test/test_gaussian.cpp)
+add_executable(test_gaussian example/test_gaussian.cpp)
 target_link_libraries(test_gaussian ${catkin_LIBRARIES} fftw3)
 
 #################

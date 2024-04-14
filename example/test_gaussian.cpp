@@ -46,8 +46,8 @@ int main(int argc, char** argv) {
     }
     rosneuro::decoder::Decoder* decoder = new rosneuro::decoder::Decoder();
 
-    const std::string fileinput  = datapath + "/test/features.csv";
-    const std::string fileoutput = datapath + "/test/rawprobRosneuro.csv";
+    const std::string fileinput  = datapath + "/example/features.csv";
+    const std::string fileoutput = datapath + "/example/rawprobRosneuro.csv";
 
     Eigen::MatrixXd input = readCSV<double>(fileinput);
 

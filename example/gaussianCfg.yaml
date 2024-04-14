@@ -3,10 +3,10 @@ GaussianCfg:
   params: 
     filename: "file1"
     subject: "S1"
-    nclasses: 2
-    classlbs: [771, 773]
-    nprototypes: 1
-    nfeatures: 6
+    n_classes: 2
+    class_lbs: [771, 773]
+    n_prototypes: 1
+    n_features: 6
     idchans: [1, 2]
     freqs: "10 12 14; 
             10 12 14"
