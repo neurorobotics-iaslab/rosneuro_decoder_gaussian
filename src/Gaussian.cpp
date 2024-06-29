@@ -18,20 +18,7 @@ namespace rosneuro{
         }
 
         std::vector<int> Gaussian::getClasses(void){
-            this->isSet();
-            std::vector<int> classes_lbs;
-            for(int i = 0; i < this->config_.class_lbs.size(); i++){
-                classes_lbs.push_back((int) this->config_.class_lbs.at(i));
-            }
-            return classes_lbs;
-        }
-
-        bool Gaussian::isSet(void){
-            if(!this->is_configured_){
-                ROS_ERROR("[%s] Decoder not configured", this->getName().c_str());
-                return false;
-            }
-            return this->is_configured_;
+            return defineClasses(this->config_.class_lbs);
         }
 
         template<typename T>
