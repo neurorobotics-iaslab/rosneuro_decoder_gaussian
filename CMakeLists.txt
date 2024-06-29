@@ -69,8 +69,8 @@ add_dependencies(${PROJECT_NAME}
 				 ${catkin_EXPORTED_TARGETS}
 )
 
-add_executable(test_gaussian example/test_gaussian.cpp)
-target_link_libraries(test_gaussian ${catkin_LIBRARIES} fftw3)
+add_executable(run_gaussian example/run_gaussian.cpp)
+target_link_libraries(run_gaussian ${catkin_LIBRARIES} fftw3)
 
 #################
 ##   Install   ##
